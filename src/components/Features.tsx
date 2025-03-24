@@ -5,7 +5,7 @@ import { ClipboardList, Search, Shield, Users, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 // Custom FaceSmiley icon since FaceIcon doesn't exist in lucide-react
-const FaceSmiley = () => (
+const FaceSmiley = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     width="24" 
@@ -16,6 +16,8 @@ const FaceSmiley = () => (
     strokeWidth="2" 
     strokeLinecap="round" 
     strokeLinejoin="round"
+    className={className}
+    {...props}
   >
     <circle cx="12" cy="8" r="6" />
     <path d="M15.5 8a3.5 3.5 0 0 1-7 0" />
