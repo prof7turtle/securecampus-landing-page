@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Button from './ui/Button';
+import { Button } from '@/components/ui/button';
 import { ChevronRight, Shield, ShieldCheck, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 

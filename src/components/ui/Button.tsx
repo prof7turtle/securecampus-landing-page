@@ -1,22 +1,24 @@
 
 import React from 'react';
 import { cn } from "@/lib/utils";
+import { Button as ShadcnButton, buttonVariants } from '@/components/ui/button';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface CustomButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   icon?: React.ReactNode;
 }
 
-const Button = ({ 
+// This is now a wrapper around the shadcn Button to avoid conflicts
+const CustomButton = ({ 
   variant = 'primary', 
   size = 'md', 
   children, 
   icon,
   className,
   ...props 
-}: ButtonProps) => {
+}: CustomButtonProps) => {
   const baseStyles = "relative inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20 rounded-lg overflow-hidden";
   
   const variants = {
@@ -43,4 +45,5 @@ const Button = ({
   );
 };
 
-export default Button;
+export default CustomButton;
+export { buttonVariants };

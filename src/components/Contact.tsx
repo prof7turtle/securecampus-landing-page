@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Section from './ui/Section';
-import Button from './ui/Button';
+import { Button } from '@/components/ui/button';
 import { MailIcon, MessageSquare, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
