@@ -1,11 +1,22 @@
 
 import React from 'react';
 import Section from './ui/Section';
-import { FaceIcon, ClipboardList, Search, Shield, Users, Clock } from 'lucide-react';
+import { ClipboardList, Search, Shield, Users, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const FaceIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+// Custom FaceSmiley icon since FaceIcon doesn't exist in lucide-react
+const FaceSmiley = () => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
     <circle cx="12" cy="8" r="6" />
     <path d="M15.5 8a3.5 3.5 0 0 1-7 0" />
     <path d="M17 16.88A7.97 7.97 0 0 1 12 20c-1.99 0-3.81-.73-5.2-1.94" />
@@ -15,7 +26,7 @@ const FaceIcon = () => (
 const Features = () => {
   const mainFeatures = [
     {
-      icon: <FaceIcon className="w-12 h-12 text-primary" />,
+      icon: <FaceSmiley className="w-12 h-12 text-primary" />,
       title: "Facial Recognition for Students",
       description: "Students can verify their identity without ID cards, using secure facial recognition to gain access to campus facilities."
     },
